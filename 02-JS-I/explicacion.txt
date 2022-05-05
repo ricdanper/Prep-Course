@@ -1,0 +1,5 @@
+Variables: sirven para almacenar datos con los cuales trabajar y usar durante el programa.
+Strings: son un tipo de dato; caracteres alineados continuamente, los cuales pueden incluir letras y números, por ejemplo 'ridape 165' o 'hola'
+Funciones: elementos que uno crea (algunos vienen por defecto) para poder ejecutarlos y hacer algo específico con ellos. Se le pueden añadir argumentos, es decir datos extra, para que tenga un comportamiento un poco mas complejo que definamos. Con return podemos obligar a la función a devolver un resultado determinado y que no se ejecute nada mas
+Declaraciones if: es una forma de control de flujo, para que ocurra distintas cosas dependiendo de si tenemos algo verdadero o falso
+Valores booleanos: basicamente son dos valores opuestos, verdadero o falso.
