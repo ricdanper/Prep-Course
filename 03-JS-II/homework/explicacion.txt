@@ -1,0 +1,2 @@
+For: es un bucle, es decir un codigo que se repite, el cual seguirá funcionando hasta que se cumpla algo que queramos
+&&, ||, !: son operadores lógicos, se usan combinar expresiones y devuelve verdadero o falso segun se vayan determinando la veracidad de dichas expresiones
