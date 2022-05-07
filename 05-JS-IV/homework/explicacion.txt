@@ -1,0 +1,6 @@
+Objetos: son contenedores de datos para almacenar mucha informacion relacionada
+Propiedades: son los distintos datos del objecto con los cuales accedemos a los valores
+Métodos: funciones guardadas en los objetos
+Bucle for..in: sirve para recorrer las propiedades del objeto y asi acceder a muchos datos
+Notación de puntos vs notación de corchetes: la notacion de puntos se usa para acceder de forma literal a una propiedad especifica,
+                                             y la notacion de corchetes puede variar en funcion de la variable que le enviemos
