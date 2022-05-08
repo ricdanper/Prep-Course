@@ -1,0 +1,1 @@
+Funciones callback: es cuando pasamos una función como argumento a otra función para ser llamada en otra externa
