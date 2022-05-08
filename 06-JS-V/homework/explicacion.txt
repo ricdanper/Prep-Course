@@ -1,0 +1,2 @@
+Prototype: establece metodos para las calases, asi los objetos pueden acceder a ellos sin necesidad de escribirlos cada vez
+Constructors: son clases (plantillas) que nos permiten por ejemplo crear objetos que hereden características
