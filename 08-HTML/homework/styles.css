@@ -19,6 +19,9 @@ img { width: 400px;}
     border-color: red;
     border-style: double;
     border-width: 20px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
 }
 #spanId {
     display: block;
