@@ -1,4 +1,15 @@
-h1 { color: navy; }
+body {
+    background-image: url(fondo.jpg);
+}
+h1, h3, h4 {
+    color: black;
+    background-color: aquamarine;
+    text-align: center;    
+}
+.divClass {
+    align-items: center;
+    justify-content: center;
+}
 img { width: 400px;}
 #thirdDiv {
     width: 500px;
@@ -9,7 +20,11 @@ img { width: 400px;}
     border-style: double;
     border-width: 20px;
 }
-#spanId { 
+#spanId {
+    display: block;
     font-size: 18px;
     margin: 50px;
+    text-align: center;
+    color: black;
+    background-color: aquamarine;
 }
