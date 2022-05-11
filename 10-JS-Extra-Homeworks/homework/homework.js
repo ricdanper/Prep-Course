@@ -50,12 +50,16 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-
-  for (var i = 0 < s.length; i++) {
-    if (s.charAt(i).oUpperCase() === s.charAt(i)) {
-      
+  var cadena1 = '';
+  var cadena2 = '';
+  for (var i = 0; i < s.length; i++) {
+    if (s.charAt(i).toUpperCase() === s.charAt(i)) {
+      cadena1 = cadena1 + s.charAt(i);
+    } else {
+      cadena2 = cadena2 + s.charAt(i);
     }
   }
+  return cadena1 + cadena2;
 }
 
 
@@ -65,6 +69,18 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  function vueltaPalabra (cadena) {
+    var palabra = cadena[cadena.length - 1];
+    for (let i = 1 ; i < cadena.length; i++) {
+      palabra = palabra + cadena[cadena.length - i - 1];
+    }
+    return palabra;
+  }
+  var frase = str.split(' ');
+  var nuevaFrase = frase.map(vueltaPalabra);
+  var nuevaFraseJunta = nuevaFrase.join(' ');
+  return nuevaFraseJunta;
+
 } 
 
 
