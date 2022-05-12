@@ -65,7 +65,7 @@ function filter(array) {
   var nuevoArreglo = [];
   array.forEach(function (elemento, indice){
     if (array[indice][0] === 'a'){
-      nuevoArreglo[indice] = elemento;
+      nuevoArreglo.push(array[indice]);
     }
   })
   return nuevoArreglo;
