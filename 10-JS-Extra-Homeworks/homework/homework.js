@@ -89,6 +89,30 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+
+  // Opcion mas "pro":
+
+  //if((numero.toString().split('').reverse().join('')) === numero.toString()){
+  //  return 'Es capicua';
+  //} else {
+  //  return 'No es capicua';
+  //}
+
+  // Opcion casera:
+
+  var resto = 0;
+  var invertido = 0;
+  var numero2 = numero;
+  while (numero2 != 0) {
+    resto = numero2 % 10;
+    numero2 = parseInt (numero2 / 10);
+    invertido = invertido * 10 + resto;
+  }
+  if (invertido === numero) {
+    return 'Es capicua';
+  } else {
+    return 'No es capicua';
+  }
 }
 
 
@@ -96,6 +120,14 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var cadena2 = '';
+  
+  for (let i = 0; i < cadena.length; i++) {
+    if (cadena[i] !== 'a' && cadena[i] !== 'b' && cadena[i] !== 'c') {
+      cadena2 = cadena2 + cadena[i];
+    }
+  }
+  return cadena2;
 }
 
 
@@ -103,6 +135,9 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+
+  return arr.sort(function (a, b) { return a.length - b.length; });
+
 }
 
 
@@ -112,6 +147,23 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  arreglo1.sort(function (uno, dos) { return uno - dos});
+  arreglo2.sort(function (uno, dos) { return uno - dos});
+  var interseccion = [];
+  var x = 0;
+  var y = 0;
+  while (x < arreglo1.length && y < arreglo2.length) {
+    if (arreglo1[x] < arreglo2[y]) {
+      x++;
+    } else if (arreglo1[x] > arreglo2[y]) {
+      y++;
+    } else {
+      interseccion.push(arreglo1[x]);
+      x++;
+      y++;
+    }
+  }
+  return interseccion;
 }
 
 
