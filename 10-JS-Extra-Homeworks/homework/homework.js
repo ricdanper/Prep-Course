@@ -10,11 +10,22 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+
+  // con entries
+  //var arreglo = Object.entries(objeto);
+  //return arreglo;
   var arreglo = [];
   arreglo = Object.keys(objeto).map(function (key) {
     return [key, objeto[key]];
   })
     return arreglo;
+
+  // con for in:
+  //var arreglo = [];
+  //for (var clave in objeto) {
+  //  array.push([clave, objeto[clave]])
+  //}
+  //return arreglo;
 }
 
 
@@ -23,6 +34,17 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+
+  // con hasOwnProperty:
+  //var objeto = {}
+  //for (var i = 0; i < string.length; I++){
+  //  if (objeto.hasOwnProperty(string[i])) {
+  //    objeto[string[i]] = objeto[string[i]] +1;
+  //  } else {
+  //    objeto[string[i]] = 1;
+  //  }
+  //}
+  //return objeto;
 
   // cuenta la cantidad de una letra en una cadena
   function contarLetras (cadena, letra) {
