@@ -72,6 +72,10 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+
+  // otra forma de sumar:
+  //cadena += s.charAt(i);
+
   var cadena1 = '';
   var cadena2 = '';
   for (var i = 0; i < s.length; i++) {
@@ -82,6 +86,8 @@ function capToFront(s) {
     }
   }
   return cadena1 + cadena2;
+
+  // o sino return cadena1.concat(cadena2)
 }
 
 
@@ -91,6 +97,13 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+
+  /* con reverse:
+  var invertida = str.split(' ').map(function (elemento) {
+    return elemento.split('').reverse().join('');
+  })
+  return invertida.join(' ')
+  */
   function vueltaPalabra (cadena) {
     var palabra = cadena[cadena.length - 1];
     for (let i = 1 ; i < cadena.length; i++) {
@@ -142,6 +155,11 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
+  /*
+  Con replace:
+  return cadena.replace(/a/g, '').replace(/b/g, '').replace(/c/g, '')
+  */
   var cadena2 = '';
   
   for (let i = 0; i < cadena.length; i++) {
@@ -169,6 +187,18 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+
+  /*
+  con forEach:
+  interseccion = [];
+  arreglo1.forEach (num1 => {
+    arreglo2.forEach (num2 => {
+      if (num1 === num2) interseccion.push(num1)
+    })
+  })
+  return interseccion;
+
+  */
   arreglo1.sort(function (uno, dos) { return uno - dos});
   arreglo2.sort(function (uno, dos) { return uno - dos});
   var interseccion = [];
