@@ -80,6 +80,14 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+
+  /*
+  Luego de ver todas las lecciones,  esto se puede con .reduce:
+    var sumaTotal = numeros.reduce (function (acc, elemento) {
+      return acc + elemento
+    })
+    return sumaTotal;
+  */
   var sumaTotal = 0;
   for (var i = 0; i < numeros.length; i++){
     sumaTotal = sumaTotal + numeros[i];
@@ -92,6 +100,15 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+
+  /*
+  Con .reduce:
+    var sumaArreglo = resultadosTest.reduce (function (acc, elemento) {
+      return acc + elemento
+    })
+    return sumaArreglo / resultadosTest.length;
+  */
+
   var sumaArreglo = 0;
   for (var i = 0; i < resultadosTest.length; i++) {
     sumaArreglo = sumaArreglo + resultadosTest[i];
@@ -116,7 +133,7 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
   var multiplicacion = 1;
   if (arguments.length === 0) {
